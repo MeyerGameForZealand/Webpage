@@ -1,12 +1,18 @@
-interface Person {
-    firstName: string;
-    lastName: string;
-}
+let nytElement: HTMLLinkElement = <HTMLLinkElement>document.getElementById("linkNyt")
+let reglElement: HTMLLinkElement = <HTMLLinkElement>document.getElementById("linkRegler")
+let spilElement: HTMLLinkElement = <HTMLLinkElement>document.getElementById("linkSpiller")
 
-function greeter(person: Person): string {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-let user: Person = { firstName: "John", lastName: "Doe" };
+nytElement.addEventListener("click", () => {
+    let iframeelement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain")
+    iframeelement.src = "Assets/NytSpil.htm"
+})
 
-let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
+reglElement.addEventListener("click", () => {
+    let iframeelement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain")
+    iframeelement.src = "Assets/Regler.htm"
+})
+
+spilElement.addEventListener("click", () => {
+    let iframeelement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain")
+    iframeelement.src = "Assets/Spillere.htm"
+})
