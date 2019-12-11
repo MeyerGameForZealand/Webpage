@@ -1,18 +1,30 @@
-let nytElement: HTMLLinkElement = <HTMLLinkElement>document.getElementById("linkNyt")
-let reglElement: HTMLLinkElement = <HTMLLinkElement>document.getElementById("linkRegler")
-let spilElement: HTMLLinkElement = <HTMLLinkElement>document.getElementById("linkSpiller")
-
-nytElement.addEventListener("click", () => {
-    let iframeelement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain")
-    iframeelement.src = "Assets/NytSpil.htm"
+/* let startElement: HTMLButtonElement = <HTMLButtonElement>document.getElementById("knap")
+let nyElement: HTMLLinkElement = <HTMLLinkElement>document.getElementById("linkNyt")
+let trackElement : HTMLButtonElement = <HTMLButtonElement>document.getElementById("TrackBtn")
+nyElement.addEventListener("click", () => {
+    let iframeElement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain");
+    iframeElement.src = "NytSpil.htm"
 })
 
-reglElement.addEventListener("click", () => {
-    let iframeelement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain")
-    iframeelement.src = "Assets/Regler.htm"
+startElement.addEventListener("click",() => {
+    let rundeElement: HTMLSelectElement = <HTMLSelectElement>document.getElementById("inputGroupSelectRunder");
+    let antalSpillereElement: HTMLSelectElement = <HTMLSelectElement>document.getElementById("inputGroupSelectSpillere")
+    let alertElement : HTMLDivElement = <HTMLDivElement>document.getElementById("startAlert");
+    let iframeElement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain")
+    let runde = +rundeElement.value;
+    let antal = +antalSpillereElement.value;
+    console.log("kartoffel")
+    iframeElement.src = "Igang.htm"
+
 })
 
-spilElement.addEventListener("click", () => {
-    let iframeelement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain")
-    iframeelement.src = "Assets/Spillere.htm"
+trackElement.addEventListener("click",() => {
+    let iframeElement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain");
+    iframeElement.src = "Regler.htm";
+    console.log("Fuck dig lorte ting")
 })
+ */
+
+$('#exampleModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })

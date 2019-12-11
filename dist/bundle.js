@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/Igang.htm":
+/*!***********************!*\
+  !*** ./src/Igang.htm ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "Igang.htm";
+
+/***/ }),
+
 /***/ "./src/index.htm":
 /*!***********************!*\
   !*** ./src/index.htm ***!
@@ -104,20 +115,34 @@ module.exports = __webpack_require__.p + "index.htm";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var nytElement = document.getElementById("linkNyt");
-var reglElement = document.getElementById("linkRegler");
-var spilElement = document.getElementById("linkSpiller");
-nytElement.addEventListener("click", function () {
-    var iframeelement = document.getElementById("imain");
-    iframeelement.src = "Assets/NytSpil.htm";
-});
-reglElement.addEventListener("click", function () {
-    var iframeelement = document.getElementById("imain");
-    iframeelement.src = "Assets/Regler.htm";
-});
-spilElement.addEventListener("click", function () {
-    var iframeelement = document.getElementById("imain");
-    iframeelement.src = "Assets/Spillere.htm";
+/* let startElement: HTMLButtonElement = <HTMLButtonElement>document.getElementById("knap")
+let nyElement: HTMLLinkElement = <HTMLLinkElement>document.getElementById("linkNyt")
+let trackElement : HTMLButtonElement = <HTMLButtonElement>document.getElementById("TrackBtn")
+nyElement.addEventListener("click", () => {
+    let iframeElement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain");
+    iframeElement.src = "NytSpil.htm"
+})
+
+startElement.addEventListener("click",() => {
+    let rundeElement: HTMLSelectElement = <HTMLSelectElement>document.getElementById("inputGroupSelectRunder");
+    let antalSpillereElement: HTMLSelectElement = <HTMLSelectElement>document.getElementById("inputGroupSelectSpillere")
+    let alertElement : HTMLDivElement = <HTMLDivElement>document.getElementById("startAlert");
+    let iframeElement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain")
+    let runde = +rundeElement.value;
+    let antal = +antalSpillereElement.value;
+    console.log("kartoffel")
+    iframeElement.src = "Igang.htm"
+
+})
+
+trackElement.addEventListener("click",() => {
+    let iframeElement: HTMLIFrameElement = <HTMLIFrameElement>document.getElementById("imain");
+    iframeElement.src = "Regler.htm";
+    console.log("Fuck dig lorte ting")
+})
+ */
+$('#exampleModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus');
 });
 
 
@@ -135,15 +160,19 @@ module.exports = __webpack_require__.p + "bundle.css";
 /***/ }),
 
 /***/ 0:
-/*!**********************************************************************!*\
-  !*** multi ./src/index.htm ./src/scss/styles.scss ./src/js/index.ts ***!
-  \**********************************************************************/
+/*!********************************************************************************************************************************************!*\
+  !*** multi ./src/index.htm ./src/scss/styles.scss ./src/js/index.ts ./src/NytSpil.htm ./src/Igang.htm ./src/Regler.htm ./src/Spillere.htm ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! ./src/index.htm */"./src/index.htm");
 __webpack_require__(/*! ./src/scss/styles.scss */"./src/scss/styles.scss");
-module.exports = __webpack_require__(/*! ./src/js/index.ts */"./src/js/index.ts");
+__webpack_require__(/*! ./src/js/index.ts */"./src/js/index.ts");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './src/NytSpil.htm'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+__webpack_require__(/*! ./src/Igang.htm */"./src/Igang.htm");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './src/Regler.htm'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module './src/Spillere.htm'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 /***/ })
