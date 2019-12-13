@@ -3,13 +3,22 @@ import axios, { AxiosResponse, AxiosError } from "../../node_modules/axios/index
 
 interface IPiTable {
   id: number;
-  userId: number;
-  title: string;
-  body: string;
+  player1hp: number;
+  player2hp: number;
+  player3hp: number;
+  player4hp: number;
+  player5hp: number;
+  player6hp: number;
+  turn: number;
+  playerAmount: number;
+  winner: number;
 }
 
-let playersJSON: string;
 let dataArray : string[]
+let HentButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHent")
+
+HentButton.addEventListener("click", performGetRequestPieTable)
+
 function performGetRequestPieTable() {
 
   axios.get<IPiTable[]>("localhost:44390/api/PiData;")
@@ -17,7 +26,7 @@ function performGetRequestPieTable() {
       let data: IPiTable[] = response.data;
       let players = JSON.stringify(data);
       data.forEach(element => {
-        console.log(element.title);
+        console.log(element.id);
       dataArray = players.split(" ");
       });
     })

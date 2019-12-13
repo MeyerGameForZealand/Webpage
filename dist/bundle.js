@@ -2070,15 +2070,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0__);
 //#region Axios methods
 
-var playersJSON;
 var dataArray;
+var HentButton = document.getElementById("buttonHent");
+HentButton.addEventListener("click", performGetRequestPieTable);
 function performGetRequestPieTable() {
     _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0___default.a.get("localhost:44390/api/PiData;")
         .then(function (response) {
         var data = response.data;
         var players = JSON.stringify(data);
         data.forEach(function (element) {
-            console.log(element.title);
+            console.log(element.id);
             dataArray = players.split(" ");
         });
     })
