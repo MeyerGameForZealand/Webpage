@@ -19,6 +19,7 @@ let HentButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("
 
 HentButton.addEventListener("click", performGetRequestPieTable)
 
+//Get method for our Pi api
 function performGetRequestPieTable() {
 
   axios.get<IPiTable[]>("localhost:44390/api/PiData;")
@@ -43,7 +44,7 @@ function performGetRequestPieTable() {
 let GenButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonGen")
 
 GenButton.addEventListener("click", generate_table)
-
+//Generates a table with players from the Pi's player input amount
 function generate_table(): void {
   // get the reference for the body
   let table: HTMLElement = <HTMLElement>document.getElementById("tableSpil");
@@ -86,7 +87,7 @@ function generate_table(): void {
 let startButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonUpdate")
 
 startButton.addEventListener("click", UpdateTable)
-
+//Updates the scores on the current game board
 function UpdateTable(): void
 {
   let liv: HTMLCollectionOf<HTMLTableDataCellElement> = document.getElementsByTagName("td")
@@ -147,7 +148,7 @@ function generate_playtable(): void {
 let refreshButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonRefresh")
 
 refreshButton.addEventListener("click", generate_Leadertable)
-
+//Generates a table of the leaderboard with player data from the data.
 function generate_Leadertable(): void {
   // get the reference for the body
   let table: HTMLElement = <HTMLElement>document.getElementById("Leaderboard");

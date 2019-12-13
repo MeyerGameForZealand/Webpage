@@ -2073,6 +2073,7 @@ __webpack_require__.r(__webpack_exports__);
 var dataArray;
 var HentButton = document.getElementById("buttonHent");
 HentButton.addEventListener("click", performGetRequestPieTable);
+//Get method for our Pi api
 function performGetRequestPieTable() {
     _node_modules_axios_index__WEBPACK_IMPORTED_MODULE_0___default.a.get("localhost:44390/api/PiData;")
         .then(function (response) {
@@ -2092,6 +2093,7 @@ function performGetRequestPieTable() {
 //#region Generate Table for username input
 var GenButton = document.getElementById("buttonGen");
 GenButton.addEventListener("click", generate_table);
+//Generates a table with players from the Pi's player input amount
 function generate_table() {
     // get the reference for the body
     var table = document.getElementById("tableSpil");
@@ -2126,6 +2128,7 @@ function generate_table() {
 //#endregion
 var startButton = document.getElementById("buttonUpdate");
 startButton.addEventListener("click", UpdateTable);
+//Updates the scores on the current game board
 function UpdateTable() {
     var liv = document.getElementsByTagName("td");
     liv[10].innerText = dataArray[1];
@@ -2179,6 +2182,7 @@ function generate_playtable(): void {
 //#region Leaderboard Generate table
 var refreshButton = document.getElementById("buttonRefresh");
 refreshButton.addEventListener("click", generate_Leadertable);
+//Generates a table of the leaderboard with player data from the data.
 function generate_Leadertable() {
     // get the reference for the body
     var table = document.getElementById("Leaderboard");
